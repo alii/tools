@@ -8,9 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "json_typegen_wasm": "^0.6.1",
     "next": "10.0.4",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-spring": "^9.0.0",
+    "swr": "^0.5.5"
   },
   "devDependencies": {
     "@types/node": "^14.14.16",
