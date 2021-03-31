@@ -1,11 +1,15 @@
 import Link from "next/link";
-import { useState } from "react";
+import { ChangeEventHandler, useEffect, useState } from "react";
 import useSWR from "swr";
 import MainLayout from "../layouts/main";
 
 export default function Lookup() {
   const [id, setId] = useState<string | null>(null);
   const { data } = useUser(id);
+
+  const change: ChangeEventHandler<HTMLInputElement> = (event) => {
+    setId(event.target.value.trim() === "" ? null : event.target.value);
+  };
 
   return (
     <MainLayout>
@@ -16,7 +20,7 @@ export default function Lookup() {
         placeholder="discord id"
         className="w-48 block bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
         value={id ?? ""}
-        onChange={(v) => setId(v.target.value)}
+        onChange={change}
       />
       {data && <pre>{JSON.stringify(data, null, 4)}</pre>}
     </MainLayout>
@@ -24,7 +28,12 @@ export default function Lookup() {
 }
 
 function useUser(id: string | null) {
-  return useSWR<User>(id ? `/api/lookup?id=${id}` : null);
+  return useSWR<User>(id ? `/api/lookup?id=${id}` : null, {
+    refreshInterval: 120 * 1000,
+    dedupingInterval: 120 * 1000,
+    errorRetryInterval: 120 * 1000,
+    focusThrottleInterval: 120 * 1000,
+  });
 }
 
 interface User {
