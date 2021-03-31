@@ -10,11 +10,11 @@ export default function Lookup() {
   return (
     <MainLayout>
       <Link href="/">back</Link>
-      <h1>Discord Lookup</h1>
+
       <input
         type="text"
-        placeholder="Discord ID"
-        className="w-48 bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
+        placeholder="discord id"
+        className="w-48 block bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
         value={id ?? ""}
         onChange={(v) => setId(v.target.value)}
       />
