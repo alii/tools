@@ -12,7 +12,6 @@
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-spring": "^9.0.0",
     "swr": "^0.5.5"
   },
   "devDependencies": {

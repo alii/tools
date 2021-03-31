@@ -32,7 +32,12 @@ export default function JSONTypescript() {
     <MainLayout>
       <Link href="../">back</Link>
       <div className="w-full grid grid-cols-2 gap-10">
-        <textarea placeholder="paste json here" value={value} onChange={(e) => setValue(e.target.value)} />
+        <textarea
+          placeholder="paste json here"
+          className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
         <div className="flex flex-col">
           <pre>{result}</pre>
 
