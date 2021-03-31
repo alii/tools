@@ -12,9 +12,9 @@ export default function Lookup() {
       <Link href="/">back</Link>
       <h1>Discord Lookup</h1>
       <input
-        type="number"
+        type="text"
         placeholder="Discord ID"
-        className="w-24 bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
+        className="w-48 bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
         value={id ?? ""}
         onChange={(v) => setId(v.target.value)}
       />
