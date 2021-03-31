@@ -7,9 +7,7 @@ export default function Lookup() {
   const [id, setId] = useState<string | null>(null);
   const { data } = useUser(id);
 
-  const change: ChangeEventHandler<HTMLInputElement> = (event) => {
-    setId(event.target.value.trim() === "" ? null : event.target.value);
-  };
+  const change: ChangeEventHandler<HTMLInputElement> = (event) => setId(event.target.value.trim() || null);
 
   return (
     <MainLayout>
