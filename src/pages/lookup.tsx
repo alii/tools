@@ -14,7 +14,7 @@ export default function Lookup() {
       <input
         type="number"
         placeholder="Discord ID"
-        className="border border-gray-800 p-2 rounded-md"
+        className="w-24 bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
         value={id ?? ""}
         onChange={(v) => setId(v.target.value)}
       />
