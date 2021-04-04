@@ -16,12 +16,7 @@ export default function JSONTypescript() {
   }, []);
 
   useEffect(() => {
-    transformer({ value })
-      .then((a) => {
-        console.log(a);
-        return a;
-      })
-      .then(setResult);
+    transformer({ value }).then(setResult);
   }, [value]);
 
   const copy = () => {
