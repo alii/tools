@@ -22,19 +22,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Link href="/lookup">
-          <a className="border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
-            <h1 className="font-semibold text-sm sm:text-regular">Discord ID Lookup</h1>
-            <p className="text-xs">Look up Discord ID.</p>
-          </a>
-        </Link>
-        <Link href="/json-ts">
-          <a className="block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
-            <h1 className="font-semibold text-sm sm:text-regular">JSON to TypeScript object</h1>
-            <p className="text-xs">Convert JSON to a TypeScript type object.</p>
-          </a>
-        </Link>
+      <div className="mt-4 space-y-2">
+        <div>
+          <Link href="/lookup">
+            <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
+              <h1 className="font-semibold text-sm sm:text-regular">Discord ID Lookup</h1>
+              <p className="text-xs">Look up Discord ID</p>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/json-ts">
+            <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
+              <h1 className="font-semibold text-sm sm:text-regular">JSON to TypeScript object</h1>
+              <p className="text-xs">Convert JSON to a TypeScript type object</p>
+            </a>
+          </Link>
+        </div>
       </div>
     </MainLayout>
   );
