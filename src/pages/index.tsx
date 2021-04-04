@@ -22,24 +22,27 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-4 space-y-2">
-        <div>
-          <Link href="/lookup">
-            <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
-              <h1 className="font-semibold text-sm sm:text-regular">Discord ID Lookup</h1>
-              <p className="text-xs">Look up Discord ID</p>
-            </a>
-          </Link>
-        </div>
-        <div>
-          <Link href="/json-ts">
-            <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
-              <h1 className="font-semibold text-sm sm:text-regular">JSON to TypeScript object</h1>
-              <p className="text-xs">Convert JSON to a TypeScript type object</p>
-            </a>
-          </Link>
-        </div>
+      <div className="mt-4 space-x-2">
+        <ToolLink to="/lookup" title="Discord ID Lookup" description="Look up Discord ID" />
+        <ToolLink
+          to="/json-ts"
+          title="JSON to TypeScript object"
+          description="Convert JSON to a TypeScript type object"
+        />
       </div>
     </MainLayout>
+  );
+}
+
+function ToolLink(props: { to: string; title: string; description: string }) {
+  return (
+    <div className="float-left mb-2">
+      <Link href={props.to}>
+        <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
+          <h1 className="font-semibold text-sm sm:text-regular">{props.title}</h1>
+          <p className="text-xs">{props.description}</p>
+        </a>
+      </Link>
+    </div>
   );
 }
