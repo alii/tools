@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-4 space-x-2">
+      <div className="mt-4">
         <ToolLink to="/lookup" title="Discord ID Lookup" description="Look up Discord ID" />
         <ToolLink
           to="/json-ts"
@@ -36,7 +36,7 @@ export default function Home() {
 
 function ToolLink(props: { to: string; title: string; description: string }) {
   return (
-    <div className="float-left mb-2">
+    <div className="float-left mb-2 mr-2">
       <Link href={props.to}>
         <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
           <h1 className="font-semibold text-sm sm:text-regular">{props.title}</h1>
