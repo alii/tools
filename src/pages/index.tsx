@@ -21,7 +21,7 @@ export default function Home() {
       <div className="flex mt-4">
         <ul className="list-disc">
           <Link href="/lookup">
-            <div className="w-auto border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
+            <a className="w-auto border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
               <div>
                 <div className="">
                   <h1 className="font-semibold text-sm sm:text-regular">
@@ -30,10 +30,10 @@ export default function Home() {
                   <p className="text-xs">Look up Discord ID.</p>
                 </div>
               </div>
-            </div>
+            </a>
           </Link>
           <Link href="/json-ts">
-            <div className="flex mt-4">
+            <a className="flex mt-4">
               <div className="w-auto border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
                 <div>
                   <div className="">
@@ -46,7 +46,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </Link>
         </ul>
       </div>
