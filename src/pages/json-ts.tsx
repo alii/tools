@@ -42,13 +42,17 @@ export default function JSONTypescript() {
       </div>
       <div className="w-full grid grid-cols-2 gap-10">
         <textarea
-          placeholder="paste json here"
-          className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono"
+          placeholder=" paste json here"
+          className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono resize-y rounded-md border hover:border-red-200 transition ease-in-out"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
         <div className="flex flex-col">
-          <pre>{result.includes("export") ? result : ""}</pre>
+          <pre
+            placeholder=" paste json here"
+            className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono resize-y rounded-md border hover:border-red-200 transition ease-in-out mb-3">
+            {result.includes("export") ? result : ""}
+          </pre>
 
           <div>
             <button className="bg-red-50 text-red-400 w-24 rounded-md" onClick={copy}>
