@@ -33,6 +33,7 @@ export default function Home() {
         />
         <ToolLink to="/crypto" title="Crypto Prices" description="Check the prices of popular cryptocurrencies" />
         <ToolLink to="/linear" title="Linear x Discord" description="Linear webhooks for Discord" />
+        <ToolLink to="https://imperialb.in/" title="IMPERIAL" description="The best hastebin/pastebin alternative ever to exist" />
       </div>
     </MainLayout>
   );
