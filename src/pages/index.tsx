@@ -12,13 +12,13 @@ export default function Home() {
         <div className="flex space-x-2">
           <a
             href="https://github.com/alii/tools"
-            className="text-black-500 hover:text-red-500 transition ease-in-out dark: text-white">
+            className="text-black-500 hover:text-red-500 transition ease-in-out dark:text-white">
             <GitHub />
           </a>
 
           <a
             href="https://twitter.com/aabbccsmith"
-            className="text-black-500 hover:text-red-500 transition ease-in-out dark: text-white">
+            className="text-black-500 hover:text-red-500 transition ease-in-out dark:text-white">
             <Twitter />
           </a>
         </div>
