@@ -49,11 +49,14 @@ export default function JSONTypescript() {
         />
         <div className="flex flex-col">
           <pre className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono resize-y rounded-md border hover:border-red-200 transition ease-in-out mb-3">
-            {result.includes("export") ? result : ""}
+            {result.includes("export") ? result : "Waiting for JSON..."}
           </pre>
 
           <div>
-            <button className="bg-red-50 text-red-400 w-24 rounded-md" onClick={copy}>
+            <button
+              className="bg-red-50 text-red-400 w-24 rounded-md"
+              onClick={copy}
+            >
               copy result
             </button>
           </div>
