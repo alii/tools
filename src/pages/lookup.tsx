@@ -17,14 +17,14 @@ export default function Lookup() {
       <BackButton />
       <input
         type="text"
-        placeholder="discord id"
-        className="w-48 block bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5"
+        placeholder="User ID"
+        className="mt-1 w-56 text-center block bg-red-50 text-red-500 rounded-md placeholder-red-300 px-2 py-1.5 dark:placeholder-gray-300 dark:bg-gray-800 border border-red-200 dark:border-gray-700 dark:text-gray-200"
         value={id ?? ""}
         onChange={change}
       />
 
       <motion.div style={{ overflow: "hidden" }} initial={{ height: 0 }} animate={{ height: id ? "auto" : "0" }}>
-        <div className="p-5 space-y-4 bg-red-50 mt-10">
+        <div className="p-5 space-y-4 bg-red-50 mt-2 dark:bg-gray-800 border border-red-200 rounded-md dark:border-gray-700">
           {data && (
             <>
               <div className="flex items-center">
