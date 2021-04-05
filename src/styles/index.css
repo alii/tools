@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-coolGray-900;
+    @apply bg-gray-900;
   }
 }
