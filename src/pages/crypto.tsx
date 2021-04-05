@@ -4,7 +4,7 @@ import { BackButton } from "../components/back-button";
 import { Pre } from "../components/pre";
 import MainLayout from "../layouts/main";
 
-const currencies = ["ETH", "BTC", "XRP"] as const;
+const currencies = ["ETH", "BTC", "XRP", "DOT", "ADA", "LTC", "BCH", "XLM", "DOGE"] as const;
 type Currency = typeof currencies[number];
 
 export default function Crypto() {
