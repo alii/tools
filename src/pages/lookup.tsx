@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { ChangeEventHandler, useEffect, useState } from "react";
+import { ChangeEventHandler, useState } from "react";
 import useSWR from "swr";
 import MainLayout from "../layouts/main";
 
@@ -20,7 +21,38 @@ export default function Lookup() {
         value={id ?? ""}
         onChange={change}
       />
-      {data && <pre>{JSON.stringify(data, null, 4)}</pre>}
+
+      <motion.div style={{ overflow: "hidden" }} initial={{ height: 0 }} animate={{ height: id ? "auto" : "0" }}>
+        <div className="p-5 space-y-4 bg-red-50 mt-10">
+          {data && (
+            <>
+              <div className="flex items-center">
+                <img
+                  src={`https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png?size=2048`}
+                  alt={`Avatar for ${data.username}#${data.discriminator}`}
+                  className="h-16 w-16 rounded-full"
+                />
+                <div className="ml-4">
+                  <h1 className="text-4xl font-bold text-red-500">{data.username}</h1>
+                  <h2 className="text-2xl font-semibold text-red-300">{data.discriminator}</h2>
+                </div>
+              </div>
+
+              <div className="space-x-4">
+                <div className="inline-block">
+                  <h2 className="text-xl font-bold text-red-500">ID</h2>
+                  <code className="bg-red-200 p-1 text-red-600 rounded-sm">{data.id}</code>
+                </div>
+
+                <div className="inline-block">
+                  <h2 className="text-xl font-bold text-red-500">Public Flags</h2>
+                  <code className="bg-red-200 p-1 text-red-600 rounded-sm">{data.public_flags}</code>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </motion.div>
     </MainLayout>
   );
 }
