@@ -14,7 +14,10 @@ export default function Crypto() {
   return (
     <MainLayout>
       <BackButton />
-      <select value={currency} onChange={(v) => set(v.target.value as Currency)}>
+      <select
+        value={currency}
+        onChange={(v) => set(v.target.value as Currency)}
+        className="w-46 inline-block bg-gray-100 border border-gray-200 rounded-md px-4 pl-0.5 py-0.5 dark:bg-gray-800 mb-2 dark:border-gray-700 dark:text-gray-300">
         {currencies.map((currency) => {
           return (
             <option value={currency} key={currency}>
