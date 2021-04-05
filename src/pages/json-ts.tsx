@@ -39,7 +39,7 @@ export default function JSONTypescript() {
       <div className="w-full grid grid-cols-2 gap-10">
         <textarea
           placeholder="Paste json here"
-          className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono resize-y rounded-md border hover:border-red-200 transition ease-in-out"
+          className="p-4 bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono resize-y rounded-md border transition ease-in-out dark:bg-gray-800 dark:border-gray-700"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
@@ -47,8 +47,10 @@ export default function JSONTypescript() {
           <Pre>{result.includes("export") ? result : "Waiting for JSON..."}</Pre>
 
           <div>
-            <button className="bg-red-50 text-red-400 w-24 rounded-md" onClick={copy}>
-              copy result
+            <button
+              className="bg-red-50 text-red-500 px-5 py-0.5 rounded-md mt-2 dark:bg-gray-800 dark:text-gray-500 transform transition hover:scale-95"
+              onClick={copy}>
+              Copy Result
             </button>
           </div>
         </div>
