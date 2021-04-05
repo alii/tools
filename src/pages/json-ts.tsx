@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import { ArrowLeft } from "react-feather";
 import MainLayout from "../layouts/main";
 
 export default function JSONTypescript() {
@@ -25,7 +26,13 @@ export default function JSONTypescript() {
 
   return (
     <MainLayout>
-      <Link href="../">back</Link>
+      <div>
+        <Link href="/">
+          <a className="inline-block bg-gray-100 text-black hover:text-red-500 hover:bg-red-50 rounded-md transition ease-in-out">
+            <ArrowLeft />
+          </a>
+        </Link>
+      </div>
       <div className="w-full grid grid-cols-2 gap-10">
         <textarea
           placeholder="paste json here"
@@ -37,7 +44,10 @@ export default function JSONTypescript() {
           <pre>{result}</pre>
 
           <div>
-            <button className="bg-red-50 text-red-400 w-24 rounded-md" onClick={copy}>
+            <button
+              className="bg-red-50 text-red-400 w-24 rounded-md"
+              onClick={copy}
+            >
               copy result
             </button>
           </div>

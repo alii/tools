@@ -2,17 +2,24 @@ import Link from "next/link";
 import { ChangeEventHandler, useEffect, useState } from "react";
 import useSWR from "swr";
 import MainLayout from "../layouts/main";
+import { ArrowLeft } from "react-feather";
 
 export default function Lookup() {
   const [id, setId] = useState<string | null>(null);
   const { data } = useUser(id);
 
-  const change: ChangeEventHandler<HTMLInputElement> = (event) => setId(event.target.value.trim() || null);
+  const change: ChangeEventHandler<HTMLInputElement> = (event) =>
+    setId(event.target.value.trim() || null);
 
   return (
     <MainLayout>
-      <Link href="/">back</Link>
-
+      <div>
+        <Link href="/">
+          <a className="inline-block bg-gray-100 text-black hover:text-red-500 hover:bg-red-50 rounded-md transition ease-in-out">
+            <ArrowLeft />
+          </a>
+        </Link>
+      </div>
       <input
         type="text"
         placeholder="discord id"
