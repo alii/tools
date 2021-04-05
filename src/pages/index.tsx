@@ -5,33 +5,27 @@ import { GitHub, Twitter } from "react-feather";
 export default function Home() {
   return (
     <MainLayout>
-      <h1 className="text-left pt-8 font-bold text-5xl pb-4">
+      <h1 className="text-left dark:text-red-200 pt-8 font-bold text-5xl pb-4">
         uwu.<span className="text-red-500">red</span> toolkit
       </h1>
       <div className="flex">
         <div className="flex space-x-2">
           <a
             href="https://github.com/alii/tools"
-            className="text-black-500 hover:text-red-500 transition ease-in-out"
-          >
+            className="dark:text-red-200 hover:text-red-500 transition ease-in-out">
             <GitHub />
           </a>
 
           <a
             href="https://twitter.com/aabbccsmith"
-            className="text-black-500 hover:text-red-500 transition ease-in-out"
-          >
+            className="dark:text-red-200 hover:text-red-500 transition ease-in-out">
             <Twitter />
           </a>
         </div>
       </div>
 
       <div className="mt-4">
-        <ToolLink
-          to="/lookup"
-          title="Discord ID Lookup"
-          description="Look up Discord ID"
-        />
+        <ToolLink to="/lookup" title="Discord ID Lookup" description="Look up Discord ID" />
         <ToolLink
           to="/json-ts"
           title="JSON to TypeScript object"
@@ -47,9 +41,7 @@ function ToolLink(props: { to: string; title: string; description: string }) {
     <div className="float-left mb-2 mr-2">
       <Link href={props.to}>
         <a className="inline-block border hover:border-red-100 transition ease-in-out bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-md placeholder-red-300 p-3">
-          <h1 className="font-semibold text-sm sm:text-regular">
-            {props.title}
-          </h1>
+          <h1 className="font-semibold text-sm sm:text-regular">{props.title}</h1>
           <p className="text-xs">{props.description}</p>
         </a>
       </Link>

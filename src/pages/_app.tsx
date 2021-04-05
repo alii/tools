@@ -1,7 +1,7 @@
-import { AppProps } from "next/app";
-import "tailwindcss/tailwind.css";
-
 import { AnimatePresence, motion } from "framer-motion";
+import { AppProps } from "next/app";
+import "../styles/index.css";
+import "tailwindcss/tailwind.css";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
