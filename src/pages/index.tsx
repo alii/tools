@@ -5,7 +5,7 @@ import { GitHub, Twitter } from "react-feather";
 export default function Home() {
   return (
     <MainLayout>
-      <h1 className="text-left pt-8 font-bold text-5xl pb-4 dark: text-white">
+      <h1 className="text-left pt-8 font-bold text-5xl pb-4 dark:text-white">
         uwu.<span className="text-red-500">red</span> toolkit
       </h1>
       <div className="flex">
