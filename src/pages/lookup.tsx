@@ -4,6 +4,7 @@ import { ChangeEventHandler, useState } from "react";
 import useSWR from "swr";
 import MainLayout from "../layouts/main";
 import { ArrowLeft } from "react-feather";
+import { BackButton } from "../components/back-button";
 
 export default function Lookup() {
   const [id, setId] = useState<string | null>(null);
@@ -13,13 +14,7 @@ export default function Lookup() {
 
   return (
     <MainLayout>
-      <div>
-        <Link href="/">
-          <a className="inline-block bg-gray-100 text-black hover:text-red-500 hover:bg-red-50 rounded-md transition ease-in-out">
-            <ArrowLeft />
-          </a>
-        </Link>
-      </div>
+      <BackButton />
       <input
         type="text"
         placeholder="discord id"

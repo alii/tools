@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useSWR from "swr";
+import { BackButton } from "../components/back-button";
 import { Pre } from "../components/pre";
 import MainLayout from "../layouts/main";
 
@@ -12,6 +13,7 @@ export default function Crypto() {
 
   return (
     <MainLayout>
+      <BackButton />
       <select value={currency} onChange={(v) => set(v.target.value as Currency)}>
         {currencies.map((currency) => {
           return (

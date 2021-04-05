@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 import { ArrowLeft } from "react-feather";
+import { BackButton } from "../components/back-button";
 import { Pre } from "../components/pre";
 import MainLayout from "../layouts/main";
 
@@ -34,13 +35,7 @@ export default function JSONTypescript() {
 
   return (
     <MainLayout>
-      <div>
-        <Link href="/">
-          <a className="inline-block bg-gray-100 text-black hover:text-red-500 hover:bg-red-50 rounded-md transition ease-in-out">
-            <ArrowLeft />
-          </a>
-        </Link>
-      </div>
+      <BackButton />
       <div className="w-full grid grid-cols-2 gap-10">
         <textarea
           placeholder="Paste json here"
