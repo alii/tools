@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useSWR from "swr";
+import { Pre } from "../components/pre";
 import MainLayout from "../layouts/main";
 
 const currencies = ["ETH", "BTC", "XRP"] as const;
@@ -20,7 +21,9 @@ export default function Crypto() {
           );
         })}
       </select>
-      <pre>{JSON.stringify(data, null, 4)}</pre>
+      <div>
+        <Pre>{JSON.stringify(data, null, 4)}</Pre>
+      </div>
     </MainLayout>
   );
 }

@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+pre,
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-ligatures: common-ligatures;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     @apply bg-gray-900;

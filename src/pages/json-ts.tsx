@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 import { ArrowLeft } from "react-feather";
+import { Pre } from "../components/pre";
 import MainLayout from "../layouts/main";
 
 export default function JSONTypescript() {
@@ -48,15 +49,10 @@ export default function JSONTypescript() {
           onChange={(e) => setValue(e.target.value)}
         />
         <div className="flex flex-col">
-          <pre className="bg-red-50 text-red-500 placeholder-red-300 h-48 font-mono resize-y rounded-md border hover:border-red-200 transition ease-in-out mb-3">
-            {result.includes("export") ? result : "Waiting for JSON..."}
-          </pre>
+          <Pre>{result.includes("export") ? result : "Waiting for JSON..."}</Pre>
 
           <div>
-            <button
-              className="bg-red-50 text-red-400 w-24 rounded-md"
-              onClick={copy}
-            >
+            <button className="bg-red-50 text-red-400 w-24 rounded-md" onClick={copy}>
               copy result
             </button>
           </div>
