@@ -31,6 +31,7 @@ export default function Home() {
           title="JSON to TypeScript object"
           description="Convert JSON to a TypeScript type object"
         />
+        <ToolLink to="/crypto" title="Crypto Prices" description="Check the prices of popular cryptocurrencies" />
       </div>
     </MainLayout>
   );
