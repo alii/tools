@@ -32,6 +32,7 @@ export default function Home() {
           description="Convert JSON to a TypeScript type object"
         />
         <ToolLink to="/crypto" title="Crypto Prices" description="Check the prices of popular cryptocurrencies" />
+        <ToolLink to="/linear" title="Linear x Discord" description="Linear webhooks for Discord" />
       </div>
     </MainLayout>
   );
