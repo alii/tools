@@ -40,7 +40,7 @@ function useCrypto(currency: Currency) {
     CNY: number;
     JPY: number;
     GBP: number;
-  }>(`https://min-api.cryptocompare.com/data/price?fsym=${currency}&tsyms=USD,EUR,CNY,JPY,GBP`, {
+  }>(`/api/crypto?symbol=${currency}`, {
     refreshInterval: 120 * 1000,
     dedupingInterval: 120 * 1000,
     errorRetryInterval: 120 * 1000,
