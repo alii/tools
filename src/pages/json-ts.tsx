@@ -8,9 +8,16 @@ export default function JSONTypescript() {
   const [result, setResult] = useState("");
 
   const transformer = useCallback(async ({ value }) => {
-    const { run } = await import("json_typegen_wasm");
+    const { run: compile } = await import("json_typegen_wasm");
+
     try {
-      return run("Root", value, JSON.stringify({ output_mode: "typescript" }));
+      return compile(
+        "Root",
+        value,
+        JSON.stringify({
+          output_mode: "typescript",
+        })
+      );
     } catch (_) {
       return "";
     }
@@ -41,13 +48,10 @@ export default function JSONTypescript() {
           onChange={(e) => setValue(e.target.value)}
         />
         <div className="flex flex-col">
-          <pre>{result}</pre>
+          <pre>{result.includes("export") ? result : ""}</pre>
 
           <div>
-            <button
-              className="bg-red-50 text-red-400 w-24 rounded-md"
-              onClick={copy}
-            >
+            <button className="bg-red-50 text-red-400 w-24 rounded-md" onClick={copy}>
               copy result
             </button>
           </div>
