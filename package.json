@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "framer-motion": "^4.1.2",
+    "framer-motion": "^4.1.9",
     "json_typegen_wasm": "^0.6.1",
     "next": "10.1.3",
     "react": "17.0.2",
@@ -18,12 +18,12 @@
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
-    "@types/node": "^14.14.37",
+    "@types/node": "^14.14.41",
     "@types/react": "^17.0.3",
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.12",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.4",
-    "typescript": "^4.2.3"
+    "tailwindcss": "^2.1.2",
+    "typescript": "^4.2.4"
   }
 }

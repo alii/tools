@@ -25,9 +25,18 @@ export default function Formatter() {
 }
 
 function Value(props: { value: string }) {
+  if (props.value === "") {
+    return <Pre>No Content</Pre>;
+  }
+
   try {
     return <Pre>{JSON.stringify(JSON.parse(props.value), null, 4)}</Pre>;
-  } catch (_) {
-    return <Pre>No Content</Pre>;
+  } catch (e) {
+    return (
+      <>
+        <Pre>Invalid JSON</Pre>
+        <p>{e.message}</p>
+      </>
+    );
   }
 }
